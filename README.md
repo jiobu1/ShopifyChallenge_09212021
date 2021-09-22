@@ -28,15 +28,15 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 2a. The total number orders by Speedy Express is 54
 
 - ``SELECT COUNT(*)``
-  ``FROM Orders``
-  ``WHERE ShipperID = 1``
+- ``FROM Orders``
+- ``WHERE ShipperID = 1``
 
 2b. The employee with the most orders is Peacock
 
 * ``(select EmployeeID, COUNT(EmployeeID) AS MOST_FREQUENT``
-  ``from Orders``
-  ``GROUP BY EmployeeID``
-  ``ORDER BY COUNT(EmployeeID) DESC)``
+* ``from Orders``
+* ``GROUP BY EmployeeID``
+* ``ORDER BY COUNT(EmployeeID) DESC)``
 
 The above query yields a table that groups order totals by Employee ID. I had to cross reference the EmployeeID that came up first
 which was EmployeeID with 40 orders with the Employees table
@@ -44,12 +44,12 @@ which was EmployeeID with 40 orders with the Employees table
 2c.
 
 * ``SELECT Products.ProductName, Customers.Country``
-  ``FROM Customers``
-  ``RIGHT JOIN Orders on Customers.CustomerID = Orders.CustomerID``
-  ``RIGHT JOIN OrderDetails on Orders.OrderID = OrderDetails.OrderID``
-  ``RIGHT JOIN Products ON OrderDetails.ProductID = Products.ProductID``
-  ``WHERE Country = 'Germany'``
-  ``GROUP BY ProductName Desc;``
+* ``FROM Customers``
+* ``RIGHT JOIN Orders on Customers.CustomerID = Orders.CustomerID``
+* ``RIGHT JOIN OrderDetails on Orders.OrderID = OrderDetails.OrderID``
+* ``RIGHT JOIN Products ON OrderDetails.ProductID = Products.ProductID``
+* ``WHERE Country = 'Germany'``
+* ``GROUP BY ProductName Desc;``
 
 This is as far as I got with this question. I understand that I need to join the CustomerID, OrderID, ProductIDs from Products,
 Customers, OderDetails, and Orders. I wanted to make sure that ProductName and Country were included to make it easier to see visually
