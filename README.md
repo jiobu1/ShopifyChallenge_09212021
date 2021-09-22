@@ -33,13 +33,11 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 
 2b. The employee with the most orders is Peacock
 
-* ``(select EmployeeID, COUNT(EmployeeID) AS MOST_FREQUENT``
-* ``from Orders``
-* ``GROUP BY EmployeeID``
-* ``ORDER BY COUNT(EmployeeID) DESC)``
-
-The above query yields a table that groups order totals by Employee ID. I had to cross reference the EmployeeID that came up first
-which was EmployeeID with 40 orders with the Employees table
+* ``select Employees.LastName, COUNT(Orders.EmployeeID) AS MOST_FREQUENT``
+* ``from Employees``
+* ``LEFT JOIN Orders ON Employees.EmployeeID = Orders.EmployeeID``
+* ``GROUP BY Employees.LastName``
+* ``ORDER BY COUNT(Orders.EmployeeID) DESC``
 
 2c.
 
