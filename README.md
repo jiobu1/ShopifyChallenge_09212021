@@ -34,7 +34,7 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 2b. The employee with the most orders is Peacock
 
 * ``SELECT Employees.LastName, COUNT(Orders.EmployeeID) AS MOST_FREQUENT``
-* ``FROM Employees``
+* ``FRON Employees``
 * ``LEFT JOIN Orders ON Employees.EmployeeID = Orders.EmployeeID``
 * ``GROUP BY Employees.LastName``
 * ``ORDER BY COUNT(Orders.EmployeeID) DESC``
