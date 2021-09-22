@@ -13,8 +13,8 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 **Answers**
 
 - 1a. What was wrong with the calculation is that stores #42 and #77 skew the numbers.
-- 1b. The easiest metric would be to find the median of all the sales.
-- 1c. The sales number that I got was $284.0.
+- 1b. I calculated the mean excluding sales from stores #42 and #78. 
+- 1c. The sales number that I got was $302.58.
 
 ## Question 2
 
